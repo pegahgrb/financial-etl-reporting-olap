@@ -1,0 +1,10 @@
+account_code,account_name,account_group,reporting_group
+4000,Product Sales,Sales Revenue,Revenue
+4010,Service Revenue,Sales Revenue,Revenue
+5000,Merchandise Cost,Direct Costs,COGS
+5100,Logistics Cost,Direct Costs,COGS
+6000,Salaries,Operating Expenses,OPEX
+6100,Rent,Operating Expenses,OPEX
+6200,Marketing,Operating Expenses,OPEX
+6300,IT Services,Operating Expenses,OPEX
+
