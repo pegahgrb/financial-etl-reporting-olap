@@ -1,10 +1,14 @@
 # Financial ETL Reporting OLAP
 
-This repository is a public portfolio reconstruction of the type of financial ETL and reporting work described in my resume. It simulates how transaction data can be integrated into a finance reporting mart for monthly KPI analysis and management reporting.
+This project is my public-safe version of the kind of financial ETL and reporting work I mentioned in my resume.
 
-## Why this project fits my profile
+It is not a copy of a real company system, but it is based on the same type of problem: taking raw finance transactions, organizing them into something more structured, and making them usable for monthly reporting.
 
-My resume includes experience with:
+I wanted this repo to feel closer to actual BI work than a very small demo script, so I kept the idea simple but tried to make the flow realistic.
+
+## Why I made this project
+
+In my resume, I mention work with:
 
 - SQL and ETL workflows
 - SSIS and SSAS
@@ -12,7 +16,7 @@ My resume includes experience with:
 - financial reporting pipelines
 - business intelligence for decision support
 
-This project is designed to reflect that background with a more complex and realistic reporting case study.
+So this repository is my way of showing that part of my background in a portfolio format.
 
 ## Project timeline
 
@@ -20,7 +24,9 @@ Portfolio reconstruction of financial BI and ETL work from 2024.
 
 ## Business scenario
 
-A trading company records financial transactions across multiple departments and account groups. Management needs a reliable reporting layer to monitor:
+A trading company has transaction data across different departments and account groups. The data exists, but it is not really in a shape that management can use directly.
+
+Usually they want fast answers to questions like:
 
 - monthly revenue
 - operating expenses
@@ -28,7 +34,9 @@ A trading company records financial transactions across multiple departments and
 - department-level spending
 - account-group level trends
 
-The raw accounting data is not directly ready for analytics, so the ETL pipeline must:
+So the main idea here was to build a small reporting mart that could support that kind of analysis.
+
+The ETL flow in this project does a few practical things:
 
 - clean transaction records
 - map accounts to reporting categories
@@ -83,7 +91,7 @@ financial-etl-reporting-olap/
 
 ## How to run
 
-From this folder:
+From this folder, run:
 
 ```powershell
 python -m venv .venv
@@ -94,14 +102,16 @@ python src\run_financial_etl.py
 
 ## Outputs
 
-The pipeline generates:
+The pipeline creates:
 
 - a cleaned finance fact table
 - monthly financial summaries
 - department expense summaries
 - account group summaries
 
-## Skills demonstrated
+The most useful output is probably the monthly summary, because it gives a simple reporting view of revenue, COGS, OPEX, gross profit, and operating profit.
+
+## What this project shows
 
 - financial data ETL
 - reporting mart design
@@ -109,10 +119,20 @@ The pipeline generates:
 - KPI definition for management reporting
 - business-aligned data modeling
 
+## Notes
+
+This project is intentionally a portfolio reconstruction, so the data is sample data and the business logic is simplified.
+
+Still, the structure is close to the kind of work I wanted to represent:
+
+- raw data coming from operations
+- ETL and mapping logic
+- a reporting-friendly model
+- outputs that a dashboard or management report could use
+
 ## Next improvements
 
 - add budget vs actual analysis
 - recreate the reporting mart in SQL Server
 - add OLAP cube-style hierarchies
 - create Power BI finance dashboards on top of the outputs
-
